@@ -115,7 +115,7 @@ async def scheduler_loop():
     while True:
         now = datetime.now()
         # Проверяем, не наступило ли 7 утра и не отправляли ли уже
-        if now.hour == 3 and now.minute == 51 and last_sent != now.date():
+        if now.hour == 11 and now.minute == 0 and last_sent != now.date():
             print("🔔 Отправляю утреннее уведомление...")
             try:
                 await send_morning_message()
